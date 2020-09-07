@@ -5,7 +5,8 @@
 # Preparation
 * Create Keypair
 ```sh
-aws --region ap-northeast-1 create-key-pair
+aws ec2 create-key-pair --key-name <keypair_name> --query 'KeyMaterial' --output text > </path/to/key.pem>
+chmod 400 </path/to/key.pem>
 ```
 
 * Copy `terraform-example.tfvars` to `terraform.tfvars`
