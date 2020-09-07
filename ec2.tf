@@ -146,7 +146,7 @@ resource "aws_instance" "benchmark" {
     rds_saz_endpoint       = aws_db_instance.postgresql_saz.address
     database_username      = var.database_username
     database_password      = var.database_password
-    database_database      = var.database_name
+    database_name          = var.database_name
   })
 
   tags = {
