@@ -23,10 +23,10 @@ mkdir -p $SCRIPTS_PATH
 cat > $SCRIPTS_PATH/install-benchmark-tools.sh <<EOF
 # pgbench
 wget https://ftp.postgresql.org/pub/source/v11.8/postgresql-11.8.tar.gz
-wget https://www.postgresql.org/message-id/attachment/64966/pgbench-ppoll-17.patch
+wget https://gist.githubusercontent.com/davidsung/25194a91f6561058187ccf1b2cf85286/raw/ad4259dadf04cb4f5b2ead0f887ec0a93c96be12/pgbench11_8-ppoll.patch
 tar -xzf postgresql-11.8.tar.gz
 cd postgresql-11.8
-patch -p1 -b < ../pgbench-ppoll-17.patch
+patch -p1 -b < ../pgbench11_8-ppoll.patch
 ./configure
 make -j 4 all
 sudo make install
