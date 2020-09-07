@@ -1,4 +1,4 @@
-# Benchmark for RDS PostgreSQL vs Aurora
+# Benchmark Performance for Aurora and RDS PostgreSQL
 ## Warning
 :warning: This terraform script will provision AWS Resources with high cost spending!
 
